@@ -1,0 +1,24 @@
+<ui:component
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:c="jakarta.tags.core"
+        xmlns:cc="jakarta.faces.composite"
+        xmlns:ui="jakarta.faces.facelets">
+
+    <cc:interface>
+        <cc:attribute name="showSomeText2"
+                      default="#{true}" type="boolean" />
+    </cc:interface>
+
+    <cc:implementation>
+        <div>
+            <p>
+                NestedCompositeTest.xhtml: showSomeText2 is #{cc.attrs.showSomeText2}
+            </p>
+            <p>
+                <c:if test="#{cc.attrs.showSomeText2}">
+                    some text
+                </c:if>
+            </p>
+        </div>
+    </cc:implementation>
+</ui:component>
